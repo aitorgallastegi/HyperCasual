@@ -18,8 +18,8 @@ public class GroundSpawner : MonoBehaviour{
     void Update(){
         
     }
-    void SpawnTile(){
-        //GameObject temp = (groundTile, nextSpawnPoint, Quaternion.Identity);
-        //nextSpawnPoint = temp.transform.GetChild(1).transform.position;
+    public void SpawnTile(){
+        GameObject temp = Instantiate(groundTile, nextSpawnPoint, Quaternion.identity);
+        nextSpawnPoint = temp.transform.GetChild(1).transform.position;
     }
 }
